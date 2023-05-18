@@ -8,7 +8,7 @@ import { useState } from "react";
 
 const ToDoApp = () => {
   //This is solely connected to taking user Input
-  const [newItem, setNewItem] = useState("");
+  const [newItem, setNewItem] = useState<any>("");
   //This is where we display the data
   interface list {
     id: number;

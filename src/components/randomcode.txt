@@ -1,0 +1,29 @@
+Code taken from the app file
+
+import Test from "./Test";
+import Button from "./Button";
+ 
+ export default function App() {
+  const [count, setCount] = useState(0);
+
+  const handleUp = () => {
+    setCount(count + 1);
+  };
+
+  const handleDown = () => {
+    setCount(count - 1);
+  };
+ 
+<h1>Hello CodeSandbox</h1>
+      <h2>Start editing to see some magic happen!</h2>
+      <h3>{count}</h3>
+      <Test
+        text={"Hello from the test"}
+        ButtonComponent={Button}
+        handleUp={handleUp}
+        handleDown={handleDown}/>
+
+         // const handleClick = (id: number) => {
+  //   console.log(`Number : ${id + 1},${data[id].text} is clicked`);
+  // };
+  //const display = data.map((t, id) => <li key={t.id}>{t.text}</li>);

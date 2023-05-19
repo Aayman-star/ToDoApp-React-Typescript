@@ -1,5 +1,5 @@
 //import Button from "./Button";
-import { ButtonProps } from "./Button";
+/*import { ButtonProps } from "./Button";
 
 type TestProps = {
   text: string;
@@ -17,4 +17,4 @@ const Test = ({ text, ButtonComponent, handleUp, handleDown }: TestProps) => {
     </>
   );
 };
-export default Test;
+export default Test;*/

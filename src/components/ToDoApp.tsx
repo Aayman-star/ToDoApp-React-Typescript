@@ -8,7 +8,8 @@ import { useState } from "react";
 
 const ToDoApp = () => {
   //This is solely connected to taking user Input
-  const [newItem, setNewItem] = useState<any>("");
+
+  const [newItem, setNewItem] = useState<string>("");
   //This is where we display the data
   interface list {
     id: number;
@@ -16,15 +17,15 @@ const ToDoApp = () => {
     checked: boolean;
   }
   const [data, setData] = useState<list[]>([]);
-  const addItem = (item) => {
+  const addItem = (item: string) => {
     const newData = [
       ...data,
-      { id: data.length + 1, checked: false, text: item }
+      { id: data.length + 1, checked: false, text: item },
     ];
     setData(newData);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     if (!newItem) return;
     //addItem
@@ -73,7 +74,7 @@ const ToDoApp = () => {
 
   return (
     <>
-      <Title />
+      <Title heading={"Breakfast Preparations"} />
       <AddItem
         newItem={newItem}
         setNewItem={setNewItem}

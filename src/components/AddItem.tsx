@@ -1,4 +1,10 @@
-const AddItem = ({ newItem, setNewItem, handleSubmit }) => {
+type AddItemProps = {
+  newItem: string;
+  setNewItem: (value: string) => void;
+  handleSubmit: React.FormEventHandler;
+};
+
+const AddItem = ({ newItem, setNewItem, handleSubmit }: AddItemProps) => {
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="addItem">Add Item</label>
